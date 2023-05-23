@@ -4,7 +4,7 @@ cloud:
       static: us-east-1
       auto: false
     credentials:
-      access-key:
-      secret-key:
+      access-key: AXXQMMUVSOX3APHVS
+      secret-key: X9EGDnb2wSZj+uaFzDQeAAiGdZsZx1tDdwVIz
     end-point:
-      uri:
+      uri: 
