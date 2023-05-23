@@ -1,0 +1,29 @@
+plugins {
+	id 'groovy'
+	id 'org.springframework.boot' version '2.5.0'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.spp.sqs'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.codehaus.groovy:groovy'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	implementation group: 'software.amazon.awssdk', name: 'sqs', version: '2.20.38'
+	implementation group: 'org.apache.camel.springboot', name: 'camel-spring-boot-starter', version: '3.20.3'
+	implementation group: 'org.apache.camel', name: 'camel-aws2-sqs', version: '3.20.3'
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
